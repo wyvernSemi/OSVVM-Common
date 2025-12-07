@@ -247,8 +247,8 @@ package AddressBusTransactionPkg is
     DataFromModel      : in ;
     DataWidth          : out ;
     -- Burst FIFOs
-    WriteBurstFifo     : in ; 
-    ReadBurstFifo      : in ; 
+    WriteBurstFifo     : InOut ;  -- InOut required for Interrupt Handler 
+    ReadBurstFifo      : InOut ;  -- InOut required for Interrupt Handler 
 --    UseCheckFifo       : boolean_max ; 
 --    CheckFifo          : ScoreboardIdType ; 
     -- Parameters - internal settings for the VC in a singleton data structure   
